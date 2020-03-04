@@ -1,28 +1,45 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <Content>
+    <div class="row">
+      <div class="col-md-6">
+        <BlogCard />
+      </div>
+      <div class="col-md-6">
+        <CoolPieChartCard />
+      </div>
+    </div>
+  </Content>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Content from "./components/layout/Content";
+import BlogCard from "./components/cards/BlogCard";
+import CoolPieChartCard from "./components/cards/CoolPieChartCard";
+
+require("./assets/css/bootstrap.css");
+require("./assets/css/tonicons.css");
+require("chartist/dist/chartist.min.css");
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Content,
+    BlogCard,
+    CoolPieChartCard
   }
-}
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+body {
+  background: #f3f3f3;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+* {
+  box-sizing: border-box;
+  line-height: 1;
 }
 </style>
