@@ -1,11 +1,10 @@
 <template>
   <Content>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 offset-md-3">
         <BlogCard />
-      </div>
-      <div class="col-md-6">
         <CoolPieChartCard />
+        <IconProgressCard />
       </div>
     </div>
   </Content>
@@ -15,6 +14,7 @@
 import Content from "./components/layout/Content";
 import BlogCard from "./components/cards/BlogCard";
 import CoolPieChartCard from "./components/cards/CoolPieChartCard";
+import IconProgressCard from "./components/cards/IconProgressCard";
 
 require("./assets/css/bootstrap.css");
 require("./assets/css/tonicons.css");
@@ -25,7 +25,8 @@ export default {
   components: {
     Content,
     BlogCard,
-    CoolPieChartCard
+    CoolPieChartCard,
+    IconProgressCard
   }
 };
 </script>

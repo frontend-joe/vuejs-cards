@@ -6,17 +6,12 @@
         <CardSubtitle>This billing period</CardSubtitle>
       </div>
       <IconButton>
-        <Icon class="material-icons-outlined">more_vert</Icon>
+        <Icon class="material-icons-outlined">
+          more_vert
+        </Icon>
       </IconButton>
     </CardHeader>
-    <Chart class="chart">
-      <chartist
-        type="Pie"
-        ratio="ct-major-second"
-        :data="chartData"
-        :options="chartOptions"
-      />
-    </Chart>
+    <ShadowPieChart />
     <BottomRow>
       <BottomRowValue>£50,409.23 </BottomRowValue>
       <BottomRowLabel>Used Balance this year </BottomRowLabel>
@@ -26,7 +21,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import Plugin from "chartist-plugin-fill-donut";
+import ShadowPieChart from "../shared/ShadowPieChart";
 
 const Card = styled.div`
   padding: 2rem 1.5rem 3rem;
@@ -34,6 +29,7 @@ const Card = styled.div`
   background: #f3f3f3;
   width: 100%;
   box-shadow: 8px 8px 10px #e0e0e0, -2px -2px 15px #ffffff;
+  margin-bottom: 10rem;
 `;
 
 const CardHeader = styled.div`
@@ -52,14 +48,6 @@ const CardTitle = styled.div`
 const CardSubtitle = styled.div`
   color: #a7a7a7;
   font-size: 0.875rem;
-`;
-
-const Chart = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 200px;
-  margin: 0 auto 2rem;
 `;
 
 const BottomRow = styled.div`
@@ -97,34 +85,12 @@ export default {
     CardHeader,
     CardTitle,
     CardSubtitle,
-    Chart,
     BottomRow,
     BottomRowLabel,
     BottomRowValue,
     IconButton,
-    Icon
-  },
-  data: function() {
-    return {
-      chartData: {
-        series: [1, 3, 2]
-      },
-      chartOptions: {
-        donut: true,
-        donutWidth: 10,
-        showLabel: false,
-        plugins: [
-          Plugin({
-            items: [
-              {
-                content:
-                  '<div class="ct-donut-label-text">Balance</div><div class="ct-donut-label-value">$10K</div>'
-              }
-            ]
-          })
-        ]
-      }
-    };
+    Icon,
+    ShadowPieChart
   }
 };
 </script>
