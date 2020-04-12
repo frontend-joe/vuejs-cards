@@ -6,6 +6,7 @@
         <CoolPieChartCard />
         <IconProgressCard />
         <AreaChartCard />
+        <CarouselCard />
       </div>
     </div>
   </Content>
@@ -17,6 +18,7 @@ import BlogCard from "./components/cards/BlogCard";
 import CoolPieChartCard from "./components/cards/CoolPieChartCard";
 import IconProgressCard from "./components/cards/IconProgressCard";
 import AreaChartCard from "./components/cards/AreaChartCard";
+import CarouselCard from "./components/cards/CarouselCard";
 
 require("./assets/css/bootstrap.css");
 require("./assets/css/tonicons.css");
@@ -29,7 +31,8 @@ export default {
     BlogCard,
     CoolPieChartCard,
     IconProgressCard,
-    AreaChartCard
+    AreaChartCard,
+    CarouselCard
   }
 };
 </script>

@@ -8,7 +8,7 @@
 import styled from "vue-styled-components";
 
 const StyledWrapper = styled.div`
-  padding: 5rem 1.5rem;
+  padding: 10rem 1.5rem;
   margin: 0 auto;
 
   @media (min-width: 901px) {
