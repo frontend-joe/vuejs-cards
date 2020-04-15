@@ -20,6 +20,7 @@ const Card = styled.div`
   overflow: hidden;
   background: #f3f3f3;
   box-shadow: 8px 8px 10px #e0e0e0, -2px -2px 15px #ffffff;
+  margin-bottom: 10rem;
 `;
 
 const CardTitle = styled.div`

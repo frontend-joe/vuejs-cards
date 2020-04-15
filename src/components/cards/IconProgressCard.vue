@@ -23,7 +23,7 @@ const Card = styled.div`
   color: #606060;
   width: 100%;
   box-shadow: 8px 8px 10px #e0e0e0, -2px -2px 15px #ffffff;
-  margin-bottom: 10rem;
+  margin-bottom: 2rem;
 `;
 
 const TopRow = styled.div`
