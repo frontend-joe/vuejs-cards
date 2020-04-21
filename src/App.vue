@@ -1,13 +1,31 @@
 <template>
   <Content>
     <div class="row">
-      <div class="col-md-6 offset-md-3">
+      <!-- <div class="col-md-6 offset-md-3">
         <BlogCard />
         <CoolPieChartCard />
         <IconProgressCard />
         <AreaChartCard />
         <CarouselCard />
         <LineChartCard />
+        <ProfileImageCard />
+      </div> -->
+      <div class="col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-md-4">
+            <BlogCard />
+            <AreaChartCard />
+          </div>
+          <div class="col-md-4">
+            <IconProgressCard />
+            <LineChartCard />
+            <CoolPieChartCard />
+          </div>
+          <div class="col-md-4">
+            <CarouselCard />
+            <ProfileImageCard />
+          </div>
+        </div>
       </div>
     </div>
   </Content>
@@ -21,6 +39,7 @@ import IconProgressCard from "./components/cards/IconProgressCard";
 import AreaChartCard from "./components/cards/AreaChartCard";
 import CarouselCard from "./components/cards/CarouselCard";
 import LineChartCard from "./components/cards/LineChartCard";
+import ProfileImageCard from "./components/cards/ProfileImageCard";
 
 require("./assets/css/bootstrap.css");
 require("./assets/css/tonicons.css");
@@ -35,7 +54,8 @@ export default {
     IconProgressCard,
     AreaChartCard,
     CarouselCard,
-    LineChartCard
+    LineChartCard,
+    ProfileImageCard
   }
 };
 </script>
