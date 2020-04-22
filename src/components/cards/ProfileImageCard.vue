@@ -32,6 +32,7 @@ const Card = styled.div`
   background: #f3f3f3;
   box-shadow: 8px 8px 10px #e0e0e0, -2px -2px 15px #ffffff;
   overflow: hidden;
+  margin-bottom: 10rem;
 `;
 
 const BackgroundColor = styled.div`
