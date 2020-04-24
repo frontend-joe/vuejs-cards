@@ -8,7 +8,7 @@
 import styled from "vue-styled-components";
 
 const StyledWrapper = styled.div`
-  padding-top: 4rem;
+  height: 100%;
   ${"" /* padding: 10rem 1.5rem; */}
   margin: 0 auto;
 
