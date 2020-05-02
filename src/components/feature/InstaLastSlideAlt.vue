@@ -143,8 +143,8 @@ const StyledBottomRow = styled.div`
 const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
-  bottom: 80px;
-  transform: rotate(-3deg) translate(-8px, -16px);
+  bottom: 0;
+  transform: rotate(-3deg) translate(-8px, -86px);
   font-family: "Alata";
 `;
 

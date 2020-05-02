@@ -35,7 +35,7 @@ export default {
 
 <style>
 body {
-  background: #f3f3f3;
+  background: #ffffff;
   font-family: "Alata", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
