@@ -10,8 +10,8 @@
       <StyledMiddleSquare>
         <StyledMiddleSquareContent>
           <StyledHowToText>How to</StyledHowToText>
-          <StyledTitleText>create an onboarding card</StyledTitleText>
-          <StyledSubtitleText>part 2</StyledSubtitleText>
+          <StyledTitleText>create a dynamic chart card</StyledTitleText>
+          <StyledSubtitleText>in vuejs</StyledSubtitleText>
         </StyledMiddleSquareContent>
         <StyledCardFrame>
           <FocalCard />
@@ -26,7 +26,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/OnboardingCarousel";
+import FocalCard from "@/components/cards/DynamicChartCard";
 
 const StyledWrapper = styled.div`
   flex: 1;
@@ -112,8 +112,8 @@ const StyledBannerText = styled.div`
 const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
-  right: 60px;
-  bottom: -10px;
+  right: 70px;
+  bottom: 60px;
   width: 300px;
   transform: rotate(-3deg);
 `;

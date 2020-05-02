@@ -53,7 +53,6 @@ const StyledFrame = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
   width: 600px;
   height: 750px;
   border: 1px solid rgba(0, 0, 0, 0.05);

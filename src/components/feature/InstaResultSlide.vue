@@ -25,7 +25,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/OnboardingCarousel";
+import FocalCard from "@/components/cards/DynamicChartCard";
 
 const StyledWrapper = styled.div`
   height: 100%;
