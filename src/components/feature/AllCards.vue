@@ -2,16 +2,17 @@
   <StyledWrapper>
     <div class="row">
       <div class="col-sm-6 offset-sm-3 col-md-6 offset-md-3">
-        <BlogCard />
-        <CoolPieChartCard />
-        <IconProgressCard />
-        <AreaChartCard />
-        <CarouselCard />
-        <LineChartCard />
-        <ProfileImageCard />
-        <SubscribeIconCard />
-        <AnimatedChartCard />
+        <RotatingInfoCard />
         <PulsingMapCard />
+        <AnimatedChartCard />
+        <SubscribeIconCard />
+        <ProfileImageCard />
+        <LineChartCard />
+        <CarouselCard />
+        <AreaChartCard />
+        <IconProgressCard />
+        <CoolPieChartCard />
+        <BlogCard />
       </div>
       <!-- <div class="col-md-10 offset-md-1">
         <div class="row">
@@ -46,6 +47,7 @@ import ProfileImageCard from "@/components/cards/ProfileImageCard";
 import SubscribeIconCard from "@/components/cards/SubscribeIconCard";
 import AnimatedChartCard from "@/components/cards/AnimatedChartCard";
 import PulsingMapCard from "@/components/cards/PulsingMapCard";
+import RotatingInfoCard from "@/components/cards/RotatingInfoCard";
 
 const StyledWrapper = styled.div`
   padding-top: 4rem;
@@ -63,7 +65,8 @@ export default {
     ProfileImageCard,
     SubscribeIconCard,
     AnimatedChartCard,
-    PulsingMapCard
+    PulsingMapCard,
+    RotatingInfoCard
   }
 };
 </script>

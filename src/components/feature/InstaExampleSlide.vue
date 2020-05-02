@@ -3,10 +3,14 @@
     <StyledFrame>
       <StyledTopRow>
         <StyledSlideCornerText>vuejs</StyledSlideCornerText>
-        <StyledSlideTitle>Result</StyledSlideTitle>
+        <StyledSlideTitle>Example</StyledSlideTitle>
         <div :style="{ width: '80px', textAlign: 'right', maxHeight: '24px' }">
           <StyledArrows :src="require('@/assets/images/arrows.png')" />
         </div>
+
+        <!-- <StyledSlideCornerText :style="{ textAlign: 'right' }"> -->
+
+        <!-- </StyledSlideCornerText> -->
       </StyledTopRow>
       <StyledMiddleSquare>
         <StyledCardFrame>
@@ -25,7 +29,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/OnboardingCarousel";
+import FocalCard from "@/components/feature/RotatingInfoCardDashboard";
 
 const StyledWrapper = styled.div`
   height: 100%;
@@ -88,7 +92,9 @@ const StyledBottomRow = styled.div`
 `;
 
 const StyledCardFrame = styled.div`
-  width: 300px;
+  position: absolute;
+  width: 900px;
+  transform: scale(0.6);
 `;
 
 const StyledFrontendJoe = styled.img`

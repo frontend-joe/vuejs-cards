@@ -50,8 +50,8 @@
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -2rem;
-  margin-left: -2rem;
+  margin-right: -1rem;
+  margin-left: -1rem;
 }
 
 .no-gutters {
@@ -138,8 +138,8 @@
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 2rem;
-  padding-left: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
 }
 
 .col {

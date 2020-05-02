@@ -4,13 +4,14 @@
       <StyledBannerText>vuejs</StyledBannerText>
       <StyledTopRow>
         <span>vuejs</span>
-        <span>1/10</span>
+        <StyledArrows :src="require('@/assets/images/arrows.png')" />
+        <!-- <span>1/10</span> -->
       </StyledTopRow>
       <StyledMiddleSquare>
         <StyledMiddleSquareContent>
           <StyledHowToText>How to</StyledHowToText>
-          <StyledTitleText>CREATE An animated chart CARD</StyledTitleText>
-          <StyledSubtitleText>VUEJS AND CSS</StyledSubtitleText>
+          <StyledTitleText>create an onboarding card</StyledTitleText>
+          <StyledSubtitleText>part 2</StyledSubtitleText>
         </StyledMiddleSquareContent>
         <StyledCardFrame>
           <FocalCard />
@@ -18,7 +19,6 @@
       </StyledMiddleSquare>
       <StyledBottomRow>
         <StyledFrontendJoe :src="require('@/assets/images/frontendjoe.png')" />
-        <StyledArrows :src="require('@/assets/images/arrows.png')" />
       </StyledBottomRow>
     </StyledFrame>
   </StyledWrapper>
@@ -26,10 +26,10 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/AnimatedChartCard";
+import FocalCard from "@/components/cards/OnboardingCarousel";
 
 const StyledWrapper = styled.div`
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,9 +47,9 @@ const StyledFrame = styled.div`
 `;
 
 const StyledTopRow = styled.div`
-  flex: 1 0 80px;
-  height: 80px;
-  max-height: 80px;
+  flex: 1 0 75px;
+  height: 75px;
+  max-height: 75px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -77,21 +77,22 @@ const StyledHowToText = styled.div`
 `;
 
 const StyledTitleText = styled.div`
-  font-size: 105px;
+  font-size: 106px;
   line-height: 0.925;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.75);
 `;
 
 const StyledSubtitleText = styled.div`
-  font-size: 38px;
+  ${"" /* font-size: 38px; */}
+  font-size: 58px;
   color: #522cad;
 `;
 
 const StyledBottomRow = styled.div`
-  flex: 1 0 80px;
-  height: 80px;
-  max-height: 80px;
+  flex: 1 0 75px;
+  height: 75px;
+  max-height: 85px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -110,10 +111,10 @@ const StyledBannerText = styled.div`
 
 const StyledCardFrame = styled.div`
   position: absolute;
-  z-index: -1;
-  right: 22px;
-  bottom: 0px;
-  width: 350px;
+  z-index: 0;
+  right: 60px;
+  bottom: -10px;
+  width: 300px;
   transform: rotate(-3deg);
 `;
 
@@ -122,8 +123,7 @@ const StyledFrontendJoe = styled.img`
 `;
 
 const StyledArrows = styled.img`
-  height: 20px;
-  display: none;
+  height: 24px;
 `;
 
 export default {

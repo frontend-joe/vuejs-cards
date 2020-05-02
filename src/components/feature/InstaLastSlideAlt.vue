@@ -18,7 +18,7 @@
           <StyledNextTimeBlock>
             <StyledNextTimeLabel>Next Time</StyledNextTimeLabel>
             <StyledNextTimeContent>
-              create a dynamic chart card
+              create a <br />skeleton card
             </StyledNextTimeContent>
           </StyledNextTimeBlock>
           <StyledCardFrame>
@@ -38,13 +38,13 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/DynamicChartCard";
+import FocalCard from "@/components/cards/SkeletonCard";
 
 const StyledWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: "Bebas Neue";
 `;
@@ -75,7 +75,7 @@ const StyledTopRow = styled.div`
 const StyledMiddleSquare = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   width: 600px;
   flex: 1 0 auto;
@@ -88,7 +88,7 @@ const StyledBlock = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 `;
 
 const StyledBlockTitle = styled.div`
@@ -103,6 +103,8 @@ const StyledBlockSubtitle = styled.div`
 
 const StyledMiddleRow = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   align-self: stretch;
 `;
 
@@ -110,10 +112,10 @@ const StyledNextTimeBlock = styled.div`
   flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  width: 140px;
-  transform: translateY(-28px);
+  width: 400px;
+  margin-bottom: 2rem;
 `;
 
 const StyledNextTimeLabel = styled.div`
@@ -125,6 +127,7 @@ const StyledNextTimeLabel = styled.div`
 const StyledNextTimeContent = styled.div`
   font-size: 3.5rem;
   line-height: 0.875;
+  text-align: center;
   color: rgba(0, 0, 0, 0.75);
 `;
 
@@ -139,8 +142,9 @@ const StyledBottomRow = styled.div`
 `;
 
 const StyledCardFrame = styled.div`
-  flex: 1 0 auto;
-  width: 200px;
+  position: absolute;
+  z-index: 0;
+  bottom: 80px;
   transform: rotate(-3deg) translate(-8px, -16px);
   font-family: "Alata";
 `;

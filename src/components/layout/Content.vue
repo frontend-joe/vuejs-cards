@@ -8,9 +8,11 @@
 import styled from "vue-styled-components";
 
 const StyledWrapper = styled.div`
-  height: 100%;
+  flex: 1 1 auto;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
   ${"" /* padding: 10rem 1.5rem; */}
-  margin: 0 auto;
 
   ${"" /* @media (min-width: 901px) {
     width: 900px;
