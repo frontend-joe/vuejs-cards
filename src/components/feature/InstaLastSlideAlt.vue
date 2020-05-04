@@ -44,7 +44,7 @@ const StyledWrapper = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   font-family: "Bebas Neue";
 `;
@@ -78,7 +78,7 @@ const StyledMiddleSquare = styled.div`
   flex-direction: column;
   width: 600px;
   flex: 1 0 auto;
-  background: rgba(0, 0, 0, 0);
+
   padding: 0 28px;
 `;
 
@@ -144,7 +144,7 @@ const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
   bottom: 0;
-  transform: rotate(-3deg) translate(-8px, -86px);
+  transform: rotate(0deg) translate(0, -126px);
   font-family: "Alata";
 `;
 

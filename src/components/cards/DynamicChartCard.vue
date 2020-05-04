@@ -2,18 +2,16 @@
   <Card>
     <TopRow>
       <CardTitle>Follows</CardTitle>
-      <TopRowButton @click="updateData('2019')" :active="activeData === '2019'">
+      <TabButton @click="updateData('2019')" :active="activeData === '2019'">
         2019
-      </TopRowButton>
-      <TopRowButton @click="updateData('2020')" :active="activeData === '2020'">
+      </TabButton>
+      <TabButton @click="updateData('2020')" :active="activeData === '2020'">
         2020
-      </TopRowButton>
+      </TabButton>
     </TopRow>
     <MiddleRow>
-      <Value>
-        24K
-      </Value>
-      <ValueIcon class="material-icons-outlined">arrow_drop_up</ValueIcon>
+      <span>24K</span>
+      <span class="material-icons-outlined">arrow_drop_up</span>
     </MiddleRow>
     <Chart>
       <apexchart
@@ -22,7 +20,7 @@
         type="area"
         :options="options"
         :series="activeData === '2020' ? seriesB : seriesA"
-      ></apexchart>
+      />
     </Chart>
   </Card>
 </template>
@@ -36,12 +34,6 @@ const Card = styled.div`
   height: 290px;
   border-radius: 0.5rem;
   background-image: linear-gradient(0deg, #522dad, #371e76);
-  margin-bottom: 2rem;
-`;
-
-const CardTitle = styled.div`
-  flex: 1;
-  color: rgba(255, 255, 255, 1);
 `;
 
 const TopRow = styled.div`
@@ -52,8 +44,13 @@ const TopRow = styled.div`
   margin-bottom: 1rem;
 `;
 
+const CardTitle = styled.div`
+  flex: 1;
+  color: rgba(255, 255, 255, 1);
+`;
+
 const buttonProps = { active: Boolean };
-const TopRowButton = styled("button", buttonProps)`
+const TabButton = styled("button", buttonProps)`
   padding: 0;
   border: 0;
   margin-left: 1rem;
@@ -64,15 +61,8 @@ const TopRowButton = styled("button", buttonProps)`
 
 const MiddleRow = styled.div`
   display: flex;
+  align-items: center;
   padding: 0 1.5rem;
-`;
-
-const Value = styled.div`
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.75);
-`;
-
-const ValueIcon = styled.div`
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.75);
 `;
@@ -86,10 +76,8 @@ export default {
     Card,
     CardTitle,
     TopRow,
-    TopRowButton,
+    TabButton,
     MiddleRow,
-    Value,
-    ValueIcon,
     Chart,
     apexchart: VueApexCharts
   },
@@ -98,7 +86,7 @@ export default {
       this.activeData = activeData;
     }
   },
-  data: function() {
+  data() {
     return {
       activeData: "2020",
       seriesA: [
@@ -146,8 +134,7 @@ export default {
           enabled: false
         },
         stroke: {
-          width: 0,
-          colors: ["#c322e0"]
+          show: false
         },
         yaxis: {
           show: false

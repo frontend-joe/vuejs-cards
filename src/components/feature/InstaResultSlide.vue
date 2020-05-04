@@ -33,6 +33,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #f3f3f3;
 `;
 
 const StyledFrame = styled.div`

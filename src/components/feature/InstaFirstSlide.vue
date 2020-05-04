@@ -34,6 +34,7 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #f3f3f3;
 `;
 
 const StyledFrame = styled.div`
@@ -113,7 +114,7 @@ const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
   right: 70px;
-  bottom: 60px;
+  bottom: 92px;
   width: 300px;
   transform: rotate(-3deg);
 `;

@@ -23,8 +23,7 @@
           <b>frontendjoe</b>
           Haven’t been doing much flutter these last couple days. Works been
           pretty intense and Ive spent the rest of my time working on Instagram
-          content. Think my love addiction with vue is in full swing at the
-          moment. 😊⁣ ⁣
+          content.
         </PostContentText>
       </PostContent>
       <FooterInfo>
@@ -66,10 +65,7 @@ const MainImageWrapper = styled.div`
 `;
 
 const MainImage = styled.img`
-  height: 100%;
   width: 100%;
-  max-width: 245px;
-  flex: 0 0 245px;
 `;
 
 const MainContent = styled.div`
@@ -92,6 +88,7 @@ const Avatar = styled.div`
 
 const AvatarImage = styled("img", skeletonProps)`
   width: 20px;
+  min-width: 20px;
   height: 20px;
   border-radius: 50%;
   background: ${props => (props.loading ? skeletonColor : "red")};
