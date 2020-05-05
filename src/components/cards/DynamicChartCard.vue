@@ -46,7 +46,7 @@ const TopRow = styled.div`
 
 const CardTitle = styled.div`
   flex: 1;
-  color: rgba(255, 255, 255, 1);
+  color: rgba(255, 255, 255, 0.9);
 `;
 
 const buttonProps = { active: Boolean };
@@ -64,7 +64,7 @@ const MiddleRow = styled.div`
   align-items: center;
   padding: 0 1.5rem;
   font-size: 2rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9);
 `;
 
 const Chart = styled.div`

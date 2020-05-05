@@ -14,6 +14,7 @@ import Topbar from "./components/layout/Topbar";
 
 require("./assets/css/bootstrap.css");
 require("./assets/css/tonicons.css");
+require("./assets/css/weather-icons.min.css");
 require("chartist/dist/chartist.min.css");
 
 const StyledWrapper = styled.div`
@@ -35,7 +36,7 @@ export default {
 
 <style>
 body {
-  background: #ffffff;
+  background: #f3f3f3;
   font-family: "Alata", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

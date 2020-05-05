@@ -20,8 +20,9 @@
         </TopRow>
         <PostContent> </PostContent>
         <FooterRow>
-          <SkeletonRectangle margin="0 0 0.2rem 0" skeletonSize="90px" />
-          <SkeletonRectangle skeletonSize="40px" />
+          <SkeletonRectangle margin="2px 0 0.3rem 0" skeletonSize="60px" />
+          <SkeletonRectangle margin="0 0 0.3rem 0" skeletonSize="90px" />
+          <SkeletonRectangle margin="0 0 0.25rem" skeletonSize="40px" />
         </FooterRow>
       </MainContent>
     </Card>
@@ -61,6 +62,7 @@ const MainImageWrapper = styled.div`
 
 const MainImage = styled.img`
   width: 100%;
+  visibility: hidden;
 `;
 
 const MainImageOverlay = styled.div`
@@ -99,7 +101,7 @@ const TopRow = styled.div`
 `;
 
 const FooterRow = styled.div`
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0;
   border-top: 1px solid #efefef;
 `;
 

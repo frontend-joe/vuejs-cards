@@ -118,14 +118,14 @@ const PostContentText = styled.span`
 const FooterInfo = styled.div`
   display: flex;
   align-items: center;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.75rem 0.25rem;
   border-top: 1px solid #efefef;
 `;
 
 const FooterDate = styled.div`
   color: #a7a7a7;
-  padding: 0 0.75rem;
-  font-size: 0.75rem;
+  padding: 0 0.75rem 0.25rem;
+  font-size: 0.625rem;
 `;
 
 export default {

@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import InstaFirstSlide from "@/components/feature/InstaFirstSlide";
+import InstaFirstSlideAlt from "@/components/feature/InstaFirstSlideAlt";
 import InstaResultSlide from "@/components/feature/InstaResultSlide";
 import InstaLastSlide from "@/components/feature/InstaLastSlide";
 import InstaLastSlideAlt from "@/components/feature/InstaLastSlideAlt";
@@ -22,6 +23,11 @@ const routes = [
     path: "/insta-first",
     name: "InstaFirstSlide",
     component: InstaFirstSlide
+  },
+  {
+    path: "/insta-first-alt",
+    name: "InstaFirstSlideAlt",
+    component: InstaFirstSlideAlt
   },
   {
     path: "/insta-result",

@@ -18,7 +18,7 @@
           <StyledNextTimeBlock>
             <StyledNextTimeLabel>Next Time</StyledNextTimeLabel>
             <StyledNextTimeContent>
-              create a dynamic chart card
+              create a login form card
             </StyledNextTimeContent>
           </StyledNextTimeBlock>
           <StyledCardFrame>
@@ -38,7 +38,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/DynamicChartCard";
+import FocalCard from "@/components/cards/LoginFormCard";
 
 const StyledWrapper = styled.div`
   height: 100%;

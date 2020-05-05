@@ -18,7 +18,7 @@
           <StyledNextTimeBlock>
             <StyledNextTimeLabel>Next Time</StyledNextTimeLabel>
             <StyledNextTimeContent>
-              create a <br />skeleton card
+              create a <br />weather card
             </StyledNextTimeContent>
           </StyledNextTimeBlock>
           <StyledCardFrame>
@@ -38,7 +38,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/SkeletonCard";
+import FocalCard from "@/components/cards/WeatherCard";
 
 const StyledWrapper = styled.div`
   height: 100%;
@@ -144,7 +144,7 @@ const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
   bottom: 0;
-  transform: rotate(0deg) translate(0, -126px);
+  transform: rotate(0deg) translate(0, -80px);
   font-family: "Alata";
 `;
 

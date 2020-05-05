@@ -15,6 +15,7 @@
     "chartist-plugin-fill-donut": "^0.1.4",
     "core-js": "^3.6.4",
     "leaflet": "^1.6.0",
+    "polished": "^3.6.1",
     "vue": "^2.6.11",
     "vue-agile": "^1.0.12",
     "vue-apexcharts": "^1.5.3",

@@ -56,6 +56,10 @@ export default {
           text: "First"
         },
         {
+          url: "/insta-first-alt",
+          text: "First 2"
+        },
+        {
           url: "/insta-result",
           text: "Result"
         },

@@ -1,23 +1,26 @@
 <template>
   <StyledWrapper>
     <StyledFrame>
+      <StyledBannerText>vuejs</StyledBannerText>
       <StyledTopRow>
-        <StyledSlideCornerText>vuejs</StyledSlideCornerText>
-        <StyledSlideTitle>Result</StyledSlideTitle>
-        <div :style="{ width: '80px', textAlign: 'right', maxHeight: '24px' }">
-          <StyledArrows :src="require('@/assets/images/arrows.png')" />
-        </div>
+        <span>vuejs</span>
+        <StyledArrows :src="require('@/assets/images/arrows.png')" />
+        <!-- <span>1/10</span> -->
       </StyledTopRow>
       <StyledMiddleSquare>
+        <StyledMiddleSquareContent>
+          <StyledHowToText>How to</StyledHowToText>
+          <StyledTitleText>create a skeleton card</StyledTitleText>
+          <StyledSubtitleText :style="{ display: 'none' }"
+            >in vuejs</StyledSubtitleText
+          >
+        </StyledMiddleSquareContent>
         <StyledCardFrame>
           <FocalCard />
         </StyledCardFrame>
       </StyledMiddleSquare>
       <StyledBottomRow>
         <StyledFrontendJoe :src="require('@/assets/images/frontendjoe.png')" />
-        <StyledSaveIcon class="material-icons-outlined">
-          bookmark_outline
-        </StyledSaveIcon>
       </StyledBottomRow>
     </StyledFrame>
   </StyledWrapper>
@@ -28,12 +31,12 @@ import styled from "vue-styled-components";
 import FocalCard from "@/components/cards/SkeletonCard";
 
 const StyledWrapper = styled.div`
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #fff;
+  background: #ffffff;
 `;
 
 const StyledFrame = styled.div`
@@ -59,23 +62,34 @@ const StyledTopRow = styled.div`
   font-size: 28px;
 `;
 
-const StyledSlideCornerText = styled.div`
-  width: 80px;
-`;
-
-const StyledSlideTitle = styled.div`
-  flex: 1;
-  text-align: center;
-`;
-
 const StyledMiddleSquare = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 011 0 auto;
   width: 600px;
-
+  flex: 1 0 auto;
   background: rgba(0, 0, 0, 0);
+`;
+
+const StyledMiddleSquareContent = styled.div`
+  padding: 20px 28px 0;
+  font-family: "Bebas Neue";
+`;
+
+const StyledHowToText = styled.div`
+  font-size: 66px;
+  margin-bottom: 8px;
+  color: rgba(0, 0, 0, 0.58);
+`;
+
+const StyledTitleText = styled.div`
+  font-size: 106px;
+  line-height: 0.925;
+  margin-bottom: 10px;
+  color: rgba(0, 0, 0, 0.75);
+`;
+
+const StyledSubtitleText = styled.div`
+  ${"" /* font-size: 38px; */}
+  font-size: 58px;
+  color: #522cad;
 `;
 
 const StyledBottomRow = styled.div`
@@ -88,8 +102,23 @@ const StyledBottomRow = styled.div`
   padding: 0 28px;
 `;
 
+const StyledBannerText = styled.div`
+  position: absolute;
+  z-index: -1;
+  top: -40px;
+  left: -8px;
+  font-size: 344px;
+  font-family: "Bebas Neue";
+  color: rgba(0, 0, 0, 0.025);
+`;
+
 const StyledCardFrame = styled.div`
+  position: absolute;
+  z-index: 0;
+  left: 58px;
+  bottom: 102px;
   width: 380px;
+  transform: rotate(-1deg) scale(1.15, 1.15);
 `;
 
 const StyledFrontendJoe = styled.img`
@@ -100,37 +129,22 @@ const StyledArrows = styled.img`
   height: 24px;
 `;
 
-const StyledSaveIcon = styled.i`
-  position: relative;
-  font-size: 38px;
-  color: #522cad;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    width: 90%;
-    height: 90%;
-    border-radius: 50%;
-    background: rgba(82, 44, 173, 0.1);
-  }
-`;
-
 export default {
   components: {
     StyledWrapper,
     StyledFrame,
     StyledTopRow,
-    StyledSlideTitle,
-    StyledSlideCornerText,
     StyledMiddleSquare,
+    StyledMiddleSquareContent,
     StyledBottomRow,
     FocalCard,
+    StyledBannerText,
     StyledCardFrame,
+    StyledHowToText,
+    StyledTitleText,
+    StyledSubtitleText,
     StyledFrontendJoe,
-    StyledArrows,
-    StyledSaveIcon
+    StyledArrows
   }
 };
 </script>
