@@ -18,7 +18,7 @@
           <StyledNextTimeBlock>
             <StyledNextTimeLabel>Next Time</StyledNextTimeLabel>
             <StyledNextTimeContent>
-              create a login form card
+              create a login form card part 1
             </StyledNextTimeContent>
           </StyledNextTimeBlock>
           <StyledCardFrame>

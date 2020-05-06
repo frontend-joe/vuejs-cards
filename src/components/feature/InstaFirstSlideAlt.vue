@@ -104,7 +104,7 @@ const StyledBottomRow = styled.div`
 
 const StyledBannerText = styled.div`
   position: absolute;
-  z-index: -1;
+  z-index: 0;
   top: -40px;
   left: -8px;
   font-size: 344px;
@@ -118,7 +118,7 @@ const StyledCardFrame = styled.div`
   left: 58px;
   bottom: 102px;
   width: 380px;
-  transform: rotate(-1deg) scale(1.15, 1.15);
+  transform: scale(1.15, 1.15);
 `;
 
 const StyledFrontendJoe = styled.img`

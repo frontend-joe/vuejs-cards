@@ -1,6 +1,7 @@
 <template>
   <div>
-    <SkeletonCardLoaded v-if="!loading" />
+    <!-- This card is displayed when data is loaded -->
+    <CardLoaded v-if="!loading" />
     <Card v-if="loading">
       <MainImageWrapper>
         <MainImage :src="require('@/assets/images/setup.png')" />
@@ -10,19 +11,17 @@
       </MainImageWrapper>
       <MainContent>
         <TopRow>
-          <SkeletonRow>
-            <SkeletonCircle margin="0 0.4rem 0 0" skeletonSize="20px" />
-            <div>
-              <SkeletonRectangle margin="0 0 0.2rem 0" skeletonSize="70px" />
-              <SkeletonRectangle skeletonSize="40px" />
-            </div>
-          </SkeletonRow>
+          <SkeletonCircle margin="0 0.4rem 0 0" size="20px" />
+          <div>
+            <SkeletonRectangle margin="0 0 0.2rem 0" size="70px" />
+            <SkeletonRectangle size="40px" />
+          </div>
         </TopRow>
         <PostContent> </PostContent>
         <FooterRow>
-          <SkeletonRectangle margin="2px 0 0.3rem 0" skeletonSize="60px" />
-          <SkeletonRectangle margin="0 0 0.3rem 0" skeletonSize="90px" />
-          <SkeletonRectangle margin="0 0 0.25rem" skeletonSize="40px" />
+          <SkeletonRectangle margin="2px 0 0.3rem 0" size="60px" />
+          <SkeletonRectangle margin="0 0 0.3rem 0" size="90px" />
+          <SkeletonRectangle margin="0 0 0.25rem" size="40px" />
         </FooterRow>
       </MainContent>
     </Card>
@@ -31,11 +30,11 @@
 
 <script>
 import styled, { keyframes } from "vue-styled-components";
-import SkeletonCardLoaded from "./SkeletonCardLoaded";
+import CardLoaded from "./SkeletonCardLoaded";
 
 const skeletonColor = "#ececec",
   skeletonProps = {
-    skeletonSize: String,
+    size: String,
     margin: String
   };
 
@@ -52,19 +51,6 @@ const Card = styled.div`
     0 9px 46px 8px rgba(0, 0, 0, 0.025), 0 11px 15px -7px rgba(0, 0, 0, 0.025);
 `;
 
-// layout components
-const MainImageWrapper = styled.div`
-  position: relative;
-  flex: 0 0 auto;
-  width: 200px;
-  max-width: 200px;
-`;
-
-const MainImage = styled.img`
-  width: 100%;
-  visibility: hidden;
-`;
-
 const MainImageOverlay = styled.div`
   position: absolute;
   top: 0;
@@ -75,27 +61,32 @@ const MainImageOverlay = styled.div`
   background: ${skeletonColor};
 `;
 
+const MainImage = styled.img`
+  width: 100%;
+  visibility: hidden;
+`;
+
+const MainImageWrapper = styled.div`
+  position: relative;
+  width: 200px;
+`;
+
 const MainContent = styled.div`
-  flex: 1 0 180px;
+  flex: 1 0 auto;
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  width: 180px;
-  background: white;
+  background: #ffffff;
   padding-bottom: 0.5rem;
 `;
 
 const PostContent = styled.div`
   flex: 1 0 auto;
-  display: flex;
-  align-items: flex-start;
-  padding: 0.75rem;
 `;
 
 const TopRow = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 0.75rem;
   border-bottom: 1px solid #efefef;
 `;
@@ -105,34 +96,24 @@ const FooterRow = styled.div`
   border-top: 1px solid #efefef;
 `;
 
-// skeleton components
-const SkeletonRow = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 const SkeletonRectangle = styled("div", skeletonProps)`
-  background: ${skeletonColor};
   height: 7px;
-  width: ${props => props.skeletonSize};
+  width: ${props => props.size};
   margin: ${props => props.margin || "0"}};
+  background: ${skeletonColor};
 `;
 
 const SkeletonCircle = styled("div", skeletonProps)`
-  width: ${props => props.skeletonSize};
-  height: ${props => props.skeletonSize};
+  width: ${props => props.size};
+  height: ${props => props.size};
   margin: ${props => props.margin || "0"}};
   border-radius: 50%;
   background: ${skeletonColor};
 `;
 
 const shimmerAnimation = keyframes`
-  0% {
-    transform: translate(-85%, 0) rotate(18deg);
-  }
-  100% {
-    transform: translate(50%, 0) rotate(18deg);
-  }
+  0% { transform: translate(-85%, 0) rotate(18deg); }
+  100% { transform: translate(50%, 0) rotate(18deg); }
 `;
 
 const SkeletonShimmer = styled.div`
@@ -155,7 +136,7 @@ const SkeletonShimmer = styled.div`
 
 export default {
   components: {
-    SkeletonCardLoaded,
+    CardLoaded,
     Card,
     MainImageWrapper,
     MainImage,
@@ -165,7 +146,6 @@ export default {
     TopRow,
     FooterRow,
     SkeletonShimmer,
-    SkeletonRow,
     SkeletonRectangle,
     SkeletonCircle
   },
