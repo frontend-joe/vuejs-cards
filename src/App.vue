@@ -15,6 +15,7 @@ import Topbar from "./components/layout/Topbar";
 require("./assets/css/bootstrap.css");
 require("./assets/css/tonicons.css");
 require("./assets/css/weather-icons.min.css");
+require("./assets/css/billabong.css");
 require("chartist/dist/chartist.min.css");
 
 const StyledWrapper = styled.div`
@@ -37,7 +38,7 @@ export default {
 <style>
 body {
   background: #f3f3f3;
-  font-family: "Alata", Helvetica, Arial, sans-serif;
+  font-family: "DM Sans", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,7 +52,6 @@ html {
 
 * {
   box-sizing: border-box;
-  line-height: 1;
   cursor: default;
 }
 

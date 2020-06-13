@@ -22,7 +22,7 @@ const Card = styled.div`
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.5rem;
-  background: linear-gradient(to right, #4c429a 0%, #9956ce 100%);
+  background: linear-gradient(to right, #4c429a 0%, #9956ce 20%);
   box-shadow: 8px 8px 10px #e0e0e0, -2px -2px 15px #ffffff;
   color: #ffffff;
   margin-bottom: 10rem;

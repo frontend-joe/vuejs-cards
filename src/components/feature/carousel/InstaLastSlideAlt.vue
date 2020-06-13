@@ -38,9 +38,10 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/WeatherCard";
+import FocalCard from "@/components/cards/LoginFormCard";
 
 const StyledWrapper = styled.div`
+  width: 400px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -144,6 +145,7 @@ const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 0;
   bottom: 0;
+  width: 320px;
   transform: rotate(0deg) translate(0, -80px);
   font-family: "Alata";
 `;

@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- This card is displayed when data is loaded -->
     <CardLoaded v-if="!loading" />
     <Card v-if="loading">
       <MainImageWrapper>

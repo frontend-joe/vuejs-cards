@@ -7,13 +7,12 @@ import App from "./App.vue";
 
 import router from "./router";
 
-library.add(fab);
-
 Vue.config.productionTip = false;
 
 Vue.use(require("vue-chartist"));
 
 // Register the component globally
+library.add(fab);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 new Vue({

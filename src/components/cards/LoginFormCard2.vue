@@ -4,24 +4,8 @@
       Login
     </CardTitle>
     <form>
-      <FormGroup>
-        <FormGroupLabel>Username</FormGroupLabel>
-        <FormTextboxWrapper>
-          <FormTextbox type="text" placeholder="Type your username" />
-          <FormTextboxIcon class="material-icons-outlined">
-            account_circle
-          </FormTextboxIcon>
-        </FormTextboxWrapper>
-      </FormGroup>
-      <FormGroup>
-        <FormGroupLabel>Password</FormGroupLabel>
-        <FormTextboxWrapper>
-          <FormTextbox type="password" placeholder="Type your password" />
-          <FormTextboxIcon class="material-icons-outlined">
-            lock
-          </FormTextboxIcon>
-        </FormTextboxWrapper>
-      </FormGroup>
+      <MaterialTextbox label="Username" type="text" icon="account_circle" />
+      <MaterialTextbox label="Password" type="password" icon="lock" />
       <CoolButton>Login</CoolButton>
     </form>
     <IconListTitle>Or login with</IconListTitle>
@@ -39,6 +23,7 @@
 
 <script>
 import styled from "vue-styled-components";
+import MaterialTextbox from "@/components/shared/MaterialTextbox";
 
 const Card = styled.div`
   width: 100%;
@@ -53,47 +38,6 @@ const Card = styled.div`
 const CardTitle = styled.div`
   font-size: 1.25rem;
   margin-bottom: 1.75rem;
-`;
-
-const FormGroup = styled.div`
-  margin-bottom: 1.75rem;
-`;
-
-const FormGroupLabel = styled.div`
-  font-size: 0.75rem;
-  color: #a7a7a7;
-`;
-
-const FormTextboxWrapper = styled.div`
-  position: relative;
-`;
-
-const FormTextbox = styled.input`
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  border: 0;
-  border-bottom: 1px solid #c7c7c7;
-  color: #606060;
-  text-indent: 2rem;
-
-  &::placeholder {
-    color: #a7a7a7;
-  }
-  &:focus {
-    border-color: #b44ff6;
-  }
-  &:focus + span {
-    color: #b44ff6;
-  }
-`;
-
-const FormTextboxIcon = styled.span`
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 20px;
 `;
 
 const CoolButton = styled.button`
@@ -142,15 +86,11 @@ export default {
   components: {
     Card,
     CardTitle,
-    FormGroup,
-    FormGroupLabel,
-    FormTextboxWrapper,
-    FormTextbox,
-    FormTextboxIcon,
     CoolButton,
     IconList,
     IconListTitle,
-    SocialIcon
+    SocialIcon,
+    MaterialTextbox
   },
   data: () => ({
     items: [

@@ -12,14 +12,18 @@
 import styled from "vue-styled-components";
 
 const StyledWrapper = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 130px;
+  background: black;
+  z-index: 2;
   padding: 0.75rem 0;
 `;
 
 const StyledNavItem = styled.div`
   & > a {
+    display: inline-block;
+    padding: 0.5rem 0;
     margin: 0 0.75rem;
     color: #888888;
     text-decoration: none;

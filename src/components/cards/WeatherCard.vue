@@ -1,14 +1,14 @@
 <template>
   <Card>
     <Sky>
-      <CardTitle>Friday</CardTitle>
-      <CardWeather>32° Cloudy</CardWeather>
+      <CardTitle>Sunday</CardTitle>
+      <CardWeather>28° Cloudy</CardWeather>
       <CloudWrapper>
         <Cloud />
       </CloudWrapper>
-      <Mountain left="-160px" bottom="-230px" color="#78c7f7" />
-      <Mountain left="0px" bottom="-230px" color="#78c7f7" />
-      <Mountain left="140px" bottom="-260px" color="#78c7f7" />
+      <Mountain left="-160px" bottom="-230px" />
+      <Mountain left="0px" bottom="-230px" />
+      <Mountain left="140px" bottom="-260px" />
     </Sky>
     <List>
       <ListItem v-for="item in weather" :key="item.day">
@@ -67,8 +67,6 @@ const Cloud = styled.div`
   &::before {
     content: "";
     position: absolute;
-    z-index: 1;
-    top: 0;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40px;
@@ -78,7 +76,7 @@ const Cloud = styled.div`
   }
 `;
 
-const mountainProps = { bottom: String, left: String, color: String };
+const mountainProps = { bottom: String, left: String };
 const Mountain = styled("div", mountainProps)`
   position: absolute;
   left: ${props => props.left};
@@ -87,7 +85,7 @@ const Mountain = styled("div", mountainProps)`
   width: 300px;
   transform: rotate(45deg) skew(-15deg, -15deg);
   border-radius: 20px;
-  background: ${props => rgba(props.color, 0.25)};
+  background: ${rgba("#78c7f7", 0.25)};
 `;
 
 const List = styled.div`
@@ -139,7 +137,7 @@ export default {
         { day: "Mon", icon: "wi-day-cloudy", temp: "28°" },
         { day: "Tue", icon: "wi-day-cloudy", temp: "29°" },
         { day: "Wed", icon: "wi-day-rain", temp: "30°" },
-        { day: "Thu", icon: "wi-day-sunny", temp: "32°" },
+        { day: "Thu", icon: "wi-day-sunny", temp: "31°" },
         { day: "Fri", icon: "wi-day-cloudy", temp: "32°" }
       ]
     };

@@ -29,7 +29,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/feature/RotatingInfoCardDashboard";
+import FocalCard from "@/components/feature/dashboard/RotatingInfoCardDashboard";
 
 const StyledWrapper = styled.div`
   height: 100%;

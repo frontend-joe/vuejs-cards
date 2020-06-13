@@ -1,15 +1,15 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import InstaFirstSlide from "@/components/feature/InstaFirstSlide";
-import InstaFirstSlideAlt from "@/components/feature/InstaFirstSlideAlt";
-import InstaResultSlide from "@/components/feature/InstaResultSlide";
-import InstaLastSlide from "@/components/feature/InstaLastSlide";
-import InstaLastSlideAlt from "@/components/feature/InstaLastSlideAlt";
-import InstaExampleSlide from "@/components/feature/InstaExampleSlide";
-import AllCards from "@/components/feature/AllCards";
-import PulsingMapDashboard from "@/components/feature/PulsingMapDashboard";
-import RotatingInfoCardDashboard from "@/components/feature/RotatingInfoCardDashboard";
+import InstaFirstSlide from "@/components/feature/carousel/InstaFirstSlide";
+import InstaFirstSlideAlt from "@/components/feature/carousel/InstaFirstSlideAlt";
+import InstaResultSlide from "@/components/feature/carousel/InstaResultSlide";
+import InstaLastSlide from "@/components/feature/carousel/InstaLastSlide";
+import InstaLastSlideAlt from "@/components/feature/carousel/InstaLastSlideAlt";
+import InstaExampleSlide from "@/components/feature/carousel/InstaExampleSlide";
+import AllCards from "@/components/feature/dashboard/AllCards";
+import PulsingMapDashboard from "@/components/feature/dashboard/PulsingMapDashboard";
+import RotatingInfoCardDashboard from "@/components/feature/dashboard/RotatingInfoCardDashboard";
 
 Vue.use(VueRouter);
 
