@@ -1,32 +1,46 @@
 <template>
   <TopRow>
-    <span :style="{ width: centerText ? '100px' : 'auto' }">
-      UI Cards
+    <span
+      :style="{
+        color: textColor || 'inherit',
+        width: centerText ? '160px' : 'auto'
+      }"
+    >
+      CSS Magic
     </span>
-    <CenterText v-if="centerText">
+    <CenterText :textColor="textColor" v-if="centerText">
       {{ centerText }}
     </CenterText>
     <div
       :style="{
         textAlign: 'right',
         height: '24px',
-        width: centerText ? '100px' : 'auto'
+        width: centerText ? '160px' : 'auto'
       }"
     >
-      <Arrow v-if="!isLastSlide" :src="require('@/assets/images/arrow.png')" />
-      <PostNotifications
-        :src="require('@/assets/images/post-notifications.png')"
-        v-if="isLastSlide"
+      <Arrow
+        v-if="!isLastSlide && true"
+        :src="
+          require(isDark
+            ? '@/assets/images/arrow-white.png'
+            : '@/assets/images/arrow.png')
+        "
       />
+      <PostNotifications :textColor="textColor" v-if="isLastSlide">
+        <span>Post Notifications</span>
+        <i class="material-icons-outlined">arrow_upward</i>
+      </PostNotifications>
     </div>
   </TopRow>
 </template>
 
 <script>
-import styled from "vue-styled-components";
+import styled, { keyframes } from "vue-styled-components";
 import { rgba } from "polished";
 
-const TopRow = styled.div`
+const styleProps = { textColor: String };
+
+const TopRow = styled("div", styleProps)`
   position: relative;
   z-index: 1;
   flex: 0 0 75px;
@@ -38,23 +52,44 @@ const TopRow = styled.div`
   font-family: DM Sans;
   font-size: 24px;
   font-weight: 800;
-  color: ${rgba("#10132F", 0.38)};
+  color: ${props => rgba(props.textColor || "#10132F", 0.38)};
 `;
 
 const Arrow = styled.img`
   height: 20px;
 `;
 
-const CenterText = styled.div`
-  color: ${rgba("#10132F", 0.75)};
+const CenterText = styled("div", styleProps)`
+  color: ${props => rgba(props.textColor || "#10132F", 0.75)};
 `;
 
-const PostNotifications = styled.img`
+const notificationAnimation = keyframes`
+  50% {
+    transform: translateY(-6px);
+  }
+`;
+
+const PostNotifications = styled("div", styleProps)`
   height: 26px;
+  color: ${props => rgba(props.textColor || "#10132F", 0.38)};
+  display: flex;
+  align-items: center;
+
+  & > span {
+    margin-right: 0.5rem;
+  }
+
+  & > i {
+    padding-top: 6px;
+    animation: ${notificationAnimation} 1.5s infinite linear;
+    font-size: 30px;
+  }
 `;
 
 export default {
   props: {
+    isDark: Boolean,
+    textColor: String,
     centerText: String,
     isLastSlide: Boolean
   },

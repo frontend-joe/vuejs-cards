@@ -57,7 +57,7 @@ html {
 
 button,
 input {
-  font-family: "Alata", Helvetica, Arial, sans-serif;
+  font-family: "DM sans", Helvetica, Arial, sans-serif;
 }
 
 button,

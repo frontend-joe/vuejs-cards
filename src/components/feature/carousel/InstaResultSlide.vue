@@ -20,7 +20,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/DatePickerCard";
+import FocalCard from "@/components/cards/SocialMediaCardExample";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";
@@ -47,9 +47,7 @@ const StyledMiddleSquare = styled.div`
   width: 600px;
 `;
 
-const StyledCardFrame = styled.div`
-  width: 320px;
-`;
+const StyledCardFrame = styled.div``;
 
 const StyledWaves = styled.div`
   position: absolute;

@@ -5,17 +5,17 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#FAF9FE">
-        <StyledWaves />
-        <Top />
+      <Frame
+        background="radial-gradient(ellipse 100% 100% at 0% 100%, #be71a0 0%, #924faf 50%, #643ec2 100%)"
+      >
+        <Top isDark textColor="rgba(255, 255, 255, 0.5)" />
         <Middle verticalAlign="flex-start">
-          <StyledBannerText>Clean Profile</StyledBannerText>
+          <StyledBannerText>Pirate Ships</StyledBannerText>
           <StyledMiddleSquareContent>
             <StyledHowToText>How To</StyledHowToText>
             <StyledTitleText>
-              Create <br />
-              Clean Profile<br />
-              Cards
+              Animate a<br />
+              Pirate Ship
               <!-- Create a <br />Call To Action <br />Card -->
             </StyledTitleText>
             <StyledSubtitleText>
@@ -29,11 +29,9 @@
               <!-- In React -->
             </StyledSubtitleText>
           </StyledMiddleSquareContent>
-          <StyledCardFrame>
-            <FocalCard />
-          </StyledCardFrame>
         </Middle>
-        <Bottom />
+        <PirateShip />
+        <Bottom :style="{ opacity: 0 }" />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -42,13 +40,13 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba, lighten } from "polished";
-import FocalCard from "@/components/cards/SocialMediaCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";
 import Top from "./shared/Top";
 import Bottom from "./shared/Bottom";
 import Middle from "./shared/Middle";
+import PirateShip from "./shared/PirateShip";
 
 const StyledWrapper = styled.div`
   flex: 1;
@@ -73,7 +71,7 @@ const StyledHowToText = styled.div`
   line-height: 52px;
   margin-bottom: 14px;
   letter-spacing: -2px;
-  color: ${rgba("#10132F", 0.57)};
+  color: ${rgba("#fff", 0.38)};
 `;
 
 const StyledTitleText = styled.div`
@@ -82,14 +80,14 @@ const StyledTitleText = styled.div`
   letter-spacing: -2px;
   line-height: 92px;
   margin-bottom: 35px;
-  color: ${rgba("#090C22", 0.85)};
+  color: ${rgba("#fff", 0.85)};
 `;
 
 const StyledSubtitleText = styled.div`
   ${"" /* font-size: 38px; */}
   font-size: 50px;
   letter-spacing: -2px;
-  color: ${rgba("#522cad", 0.85)};
+  color: ${rgba("#fff", 0.5)};
   display: flex;
   align-items: center;
 `;
@@ -103,30 +101,8 @@ const StyledBannerText = styled.div`
   font-size: 180px;
   font-family: "DM Sans";
   font-weight: 600;
-  color: #f1f1fa;
+  color: rgba(255, 255, 255, 0.05);
   white-space: nowrap;
-`;
-
-const StyledCardFrame = styled.div`
-  position: absolute;
-  z-index: 1;
-  right: 34px;
-  bottom: 125px;
-  width: 290px;
-  transform: rotate(-3deg) scale(1);
-`;
-
-const StyledWaves = styled.div`
-  position: absolute;
-  z-index: 1;
-  bottom: -18px;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  background: url(${require("@/assets/images/first-slide-wave.png")});
-  background-size: 200%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
 `;
 
 const StyledIconWrapper = styled.span`
@@ -151,7 +127,6 @@ export default {
   components: {
     StyledWrapper,
     StyledMiddleSquareContent,
-    FocalCard,
     Frame,
     FrameWrapper,
     Top,
@@ -159,12 +134,11 @@ export default {
     Bottom,
     ImageNext,
     StyledBannerText,
-    StyledCardFrame,
     StyledHowToText,
     StyledTitleText,
     StyledSubtitleText,
-    StyledWaves,
-    StyledIconWrapper
+    StyledIconWrapper,
+    PirateShip
   }
 };
 </script>
