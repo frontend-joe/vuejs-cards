@@ -5,16 +5,16 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#FAF9FE">
-        <StyledWaves />
-        <Top />
+      <Frame background="#0F0E0E">
+        <StyledWaves v-if="false" />
+        <Top textColor="white" isDark />
         <Middle verticalAlign="flex-start">
-          <StyledBannerText>Clean Profile</StyledBannerText>
+          <StyledBannerText>Pagination</StyledBannerText>
           <StyledMiddleSquareContent>
             <StyledHowToText>How To</StyledHowToText>
             <StyledTitleText>
               Create <br />
-              Clean Profile<br />
+              Pagination<br />
               Cards
               <!-- Create a <br />Call To Action <br />Card -->
             </StyledTitleText>
@@ -33,7 +33,7 @@
             <FocalCard />
           </StyledCardFrame>
         </Middle>
-        <Bottom />
+        <Bottom isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -42,7 +42,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba, lighten } from "polished";
-import FocalCard from "@/components/cards/SocialMediaCard";
+import FocalCard from "@/components/cards/PaginationCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";
@@ -73,7 +73,7 @@ const StyledHowToText = styled.div`
   line-height: 52px;
   margin-bottom: 14px;
   letter-spacing: -2px;
-  color: ${rgba("#10132F", 0.57)};
+  color: ${rgba("#fff", 0.57)};
 `;
 
 const StyledTitleText = styled.div`
@@ -82,14 +82,14 @@ const StyledTitleText = styled.div`
   letter-spacing: -2px;
   line-height: 92px;
   margin-bottom: 35px;
-  color: ${rgba("#090C22", 0.85)};
+  color: ${rgba("#fff", 0.85)};
 `;
 
 const StyledSubtitleText = styled.div`
   ${"" /* font-size: 38px; */}
   font-size: 50px;
   letter-spacing: -2px;
-  color: ${rgba("#522cad", 0.85)};
+  color: ${rgba("#8868d4", 0.75)};
   display: flex;
   align-items: center;
 `;
@@ -103,7 +103,7 @@ const StyledBannerText = styled.div`
   font-size: 180px;
   font-family: "DM Sans";
   font-weight: 600;
-  color: #f1f1fa;
+  color: ${rgba("white", 0.025)};
   white-space: nowrap;
 `;
 
@@ -111,7 +111,7 @@ const StyledCardFrame = styled.div`
   position: absolute;
   z-index: 1;
   right: 34px;
-  bottom: 125px;
+  bottom: 55px;
   width: 290px;
   transform: rotate(-3deg) scale(1);
 `;

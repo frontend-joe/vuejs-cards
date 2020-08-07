@@ -5,32 +5,37 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#FAF9FE">
-        <StyledWaves />
-        <Top isLastSlide />
+      <Frame background="linear-gradient(to top, #283E51, #0A2342)">
+        <StyledWaves v-if="false" />
+        <Top isLastSlide textColor="white" />
         <Middle>
-          <div
-            :style="{ padding: '0 24px', marginTop: '-40px', width: '100%' }"
-          >
+          <div :style="{ padding: '0 24px', marginTop: '0', width: '100%' }">
             <StyledHowToText>Was It Useful?</StyledHowToText>
             <StyledTitleText>Let me know in the comments</StyledTitleText>
+
+            <StyledCenter v-if="true">
+              <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
+              <StyledNextTimeText>
+                Create<br />
+                Pagination<br />
+                Cards
+              </StyledNextTimeText>
+              <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
+
+              <FocalCard />
+            </StyledCenter>
+
             <StyledRow>
-              <StyledLeft :style="{ transform: 'translateY(-10px)' }">
-                <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
-                <StyledNextTimeText>
-                  Create <br />
-                  Social Media <br />
-                  Cards
-                </StyledNextTimeText>
-                <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
+              <StyledLeft
+                v-if="false"
+                :style="{ transform: 'translate(-14px, -10px)' }"
+              >
               </StyledLeft>
-              <StyledRight>
-                <FocalCard />
-              </StyledRight>
+              <StyledRight v-if="false"> </StyledRight>
             </StyledRow>
           </div>
         </Middle>
-        <Bottom />
+        <Bottom isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -39,7 +44,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/cards/SocialMediaCard";
+import FocalCard from "@/components/cards/PaginationCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImagePrev from "./shared/ImagePrev";
@@ -73,7 +78,16 @@ const StyledLeft = styled.div`
 
 const StyledRight = styled.div`
   flex: 0 0 auto;
-  transform: rotate(-2deg) translateX(-15px);
+  transform: rotate(-2deg) translateX(-25px);
+`;
+
+const StyledCenter = styled.div`
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 `;
 
 const StyledHowToText = styled.div`
@@ -83,7 +97,7 @@ const StyledHowToText = styled.div`
   letter-spacing: -1px;
   line-height: 1.5;
   text-align: center;
-  color: ${rgba("#10132F", 0.85)};
+  color: ${rgba("#fff", 0.85)};
 `;
 
 const StyledTitleText = styled.div`
@@ -92,27 +106,29 @@ const StyledTitleText = styled.div`
   letter-spacing: -0.5px;
   margin-bottom: 40px;
   text-align: center;
-  color: ${rgba("#090C22", 0.57)};
+  color: ${rgba("#fff", 0.57)};
 `;
 
 const StyledNextTimeTitle = styled.div`
   font-size: 28px;
   letter-spacing: -0.5px;
-  color: ${rgba("#090C22", 0.57)};
+  text-align: center;
+  color: ${rgba("#fff", 0.57)};
 `;
 
 const StyledNextTimeText = styled.div`
   font-size: 38px;
   line-height: 1.2;
   letter-spacing: -1px;
-  color: ${rgba("#10132F", 0.85)};
+  text-align: center;
+  color: ${rgba("#fff", 0.85)};
   margin-bottom: 6px;
 `;
 
 const StyledNextTimeLibary = styled.div`
   font-size: 28px;
   letter-spacing: -0.5px;
-  color: ${rgba("#522cad", 0.75)};
+  color: ${rgba("#fff", 0.57)};
 `;
 
 const StyledWaves = styled.div`
@@ -134,6 +150,7 @@ export default {
     StyledRow,
     StyledLeft,
     StyledRight,
+    StyledCenter,
     StyledHowToText,
     StyledTitleText,
     StyledNextTimeTitle,

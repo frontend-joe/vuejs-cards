@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[18],{vlRD:function(n,w,o){(window.__NEXT_P=window.__NEXT_P||[]).push(["/",function(){return o("RNiq")}])}},[["vlRD",1,0,4,8,7,2,3,6,5,9,10]]]);

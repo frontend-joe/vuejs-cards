@@ -2,11 +2,11 @@
   <TopRow>
     <span
       :style="{
-        color: textColor || 'inherit',
+        color: getSubtitleColor,
         width: centerText ? '160px' : 'auto'
       }"
     >
-      CSS Magic
+      UI Cards
     </span>
     <CenterText :textColor="textColor" v-if="centerText">
       {{ centerText }}
@@ -27,7 +27,7 @@
         "
       />
       <PostNotifications :textColor="textColor" v-if="isLastSlide">
-        <span>Post Notifications</span>
+        <span>Notifications</span>
         <i class="material-icons-outlined">arrow_upward</i>
       </PostNotifications>
     </div>
@@ -92,6 +92,11 @@ export default {
     textColor: String,
     centerText: String,
     isLastSlide: Boolean
+  },
+  computed: {
+    getSubtitleColor() {
+      return rgba(this.textColor || "black", 0.38);
+    }
   },
   components: {
     TopRow,

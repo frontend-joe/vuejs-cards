@@ -1,10 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import InstaFirstSlide from "@/components/feature/carousel/InstaFirstSlideShip";
+import InstaFirstSlide from "@/components/feature/carousel/InstaFirstSlide";
 import InstaFirstSlideAlt from "@/components/feature/carousel/InstaFirstSlideAlt";
-import InstaResultSlide from "@/components/feature/carousel/InstaResultSlideShip";
-import InstaLastSlide from "@/components/feature/carousel/InstaLastSlideShip";
+import InstaResultSlide from "@/components/feature/carousel/InstaResultSlide";
+import InstaLastSlide from "@/components/feature/carousel/InstaLastSlide";
 import InstaLastSlideAlt from "@/components/feature/carousel/InstaLastSlideAlt";
 import InstaExampleSlide from "@/components/feature/carousel/InstaExampleSlide";
 import AllCards from "@/components/feature/dashboard/AllCards";

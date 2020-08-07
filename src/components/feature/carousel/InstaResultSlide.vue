@@ -2,9 +2,9 @@
   <StyledWrapper>
     <FrameWrapper>
       <ImageNext v-if="false" />
-      <Frame background="#f7f7fd">
-        <StyledWaves />
-        <Top centerText="Result" />
+      <Frame background="#0F0E0E">
+        <StyledWaves v-if="false" />
+        <Top isDark centerText="Result" textColor="white" />
         <Middle>
           <StyledMiddleSquare>
             <StyledCardFrame>
@@ -12,7 +12,7 @@
             </StyledCardFrame>
           </StyledMiddleSquare>
         </Middle>
-        <Bottom />
+        <Bottom isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -20,7 +20,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/SocialMediaCardExample";
+import FocalCard from "@/components/cards/PaginationCardSimple";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";

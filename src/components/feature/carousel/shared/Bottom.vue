@@ -1,6 +1,6 @@
 <template>
   <BottomRow>
-    <FrontendJoe :src="require('@/assets/images/frontendjoe.png')" />
+    <FrontendJoe :src="getHandleImage" />
     <SaveIcon
       v-if="!hideSaveIcon"
       :style="{ display: 'block' }"
@@ -49,7 +49,19 @@ const SaveIcon = styled.i`
 
 export default {
   props: {
-    hideSaveIcon: Boolean
+    hideSaveIcon: Boolean,
+    isDark: Boolean
+  },
+  computed: {
+    getHandleImage() {
+      const imageUrl = require(`@/assets/images/${
+        !this.isDark ? "frontendjoe.png" : "frontendjoe-grey.png"
+      }`);
+
+      console.log("getHandleImage", imageUrl);
+
+      return imageUrl;
+    }
   },
   components: {
     BottomRow,
