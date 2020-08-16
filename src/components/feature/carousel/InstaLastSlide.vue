@@ -5,10 +5,10 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="linear-gradient(to top, #283E51, #0A2342)">
+      <Frame background="linear-gradient(to top, #b2538c, #2d0542)">
         <StyledWaves v-if="false" />
         <Top isLastSlide textColor="white" />
-        <Middle>
+        <Middle verticalAlign="flex-start">
           <div :style="{ padding: '0 24px', marginTop: '0', width: '100%' }">
             <StyledHowToText>Was It Useful?</StyledHowToText>
             <StyledTitleText>Let me know in the comments</StyledTitleText>
@@ -16,13 +16,13 @@
             <StyledCenter v-if="true">
               <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
               <StyledNextTimeText>
-                Create<br />
-                Pagination<br />
-                Cards
+                Load<br />
+                Rockets
               </StyledNextTimeText>
               <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
-
-              <FocalCard />
+              <StyledCardFrame>
+                <FocalCard />
+              </StyledCardFrame>
             </StyledCenter>
 
             <StyledRow>
@@ -44,7 +44,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/cards/PaginationCard";
+import FocalCard from "@/components/magic/LoadRocketsSvg";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImagePrev from "./shared/ImagePrev";
@@ -111,6 +111,7 @@ const StyledTitleText = styled.div`
 
 const StyledNextTimeTitle = styled.div`
   font-size: 28px;
+  font-weight: 600;
   letter-spacing: -0.5px;
   text-align: center;
   color: ${rgba("#fff", 0.57)};
@@ -118,6 +119,7 @@ const StyledNextTimeTitle = styled.div`
 
 const StyledNextTimeText = styled.div`
   font-size: 38px;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
   text-align: center;
@@ -127,6 +129,7 @@ const StyledNextTimeText = styled.div`
 
 const StyledNextTimeLibary = styled.div`
   font-size: 28px;
+  font-weight: 600;
   letter-spacing: -0.5px;
   color: ${rgba("#fff", 0.57)};
 `;
@@ -144,6 +147,12 @@ const StyledWaves = styled.div`
   background-repeat: no-repeat;
 `;
 
+const StyledCardFrame = styled.div`
+  ${"" /* position: absolute;
+  right: 0;
+  bottom: 0; */}
+`;
+
 export default {
   components: {
     StyledWrapper,
@@ -157,6 +166,7 @@ export default {
     StyledNextTimeText,
     StyledNextTimeLibary,
     StyledWaves,
+    StyledCardFrame,
     FocalCard,
     Frame,
     FrameWrapper,
