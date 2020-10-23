@@ -5,17 +5,15 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#0F0E0E">
-        <StyledWaves v-if="false" />
+      <Frame background="linear-gradient(to top, #b2538c, #2d0542)">
         <Top textColor="white" isDark />
         <Middle verticalAlign="flex-start">
-          <StyledBannerText>Pagination</StyledBannerText>
+          <StyledBannerText>Animation</StyledBannerText>
           <StyledMiddleSquareContent>
             <StyledHowToText>How To</StyledHowToText>
             <StyledTitleText>
-              Create <br />
-              Pagination<br />
-              Cards
+              Load Rocket <br />
+              Animation
               <!-- Create a <br />Call To Action <br />Card -->
             </StyledTitleText>
             <StyledSubtitleText>
@@ -33,7 +31,7 @@
             <FocalCard />
           </StyledCardFrame>
         </Middle>
-        <Bottom isDark />
+        <Bottom v-if="false" isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -42,7 +40,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba, lighten } from "polished";
-import FocalCard from "@/components/cards/PaginationCard";
+import FocalCard from "@/components/magic/LoadRocketsSvg.vue";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";
@@ -63,13 +61,12 @@ const StyledMiddleSquareContent = styled.div`
   z-index: 1;
   width: 100%;
   padding: 19px 28px 0;
-  font-family: "DM Sans";
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const StyledHowToText = styled.div`
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 52px;
   margin-bottom: 14px;
   letter-spacing: -2px;
@@ -78,7 +75,7 @@ const StyledHowToText = styled.div`
 
 const StyledTitleText = styled.div`
   font-size: 5.25rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -2px;
   line-height: 92px;
   margin-bottom: 35px;
@@ -89,7 +86,8 @@ const StyledSubtitleText = styled.div`
   ${"" /* font-size: 38px; */}
   font-size: 50px;
   letter-spacing: -2px;
-  color: ${rgba("#8868d4", 0.75)};
+  color: ${rgba("white", 0.45)};
+  ${"" /* color: ${rgba("#8868d4", 0.75 */}
   display: flex;
   align-items: center;
 `;
@@ -99,34 +97,25 @@ const StyledBannerText = styled.div`
   z-index: 0;
   top: 173px;
   left: -25px;
-  letter-spacing: -15px;
+  letter-spacing: -10px;
   font-size: 180px;
-  font-family: "DM Sans";
-  font-weight: 600;
+  font-weight: 500;
   color: ${rgba("white", 0.025)};
   white-space: nowrap;
 `;
 
 const StyledCardFrame = styled.div`
-  position: absolute;
+  ${"" /* position: absolute;
   z-index: 1;
   right: 34px;
   bottom: 55px;
   width: 290px;
-  transform: rotate(-3deg) scale(1);
-`;
-
-const StyledWaves = styled.div`
+  transform: rotate(-3deg) scale(1); */}
   position: absolute;
-  z-index: 1;
-  bottom: -18px;
   left: 0;
+  bottom: -100px;
   width: 100%;
-  height: 500px;
-  background: url(${require("@/assets/images/first-slide-wave.png")});
-  background-size: 200%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
+  height: 400px;
 `;
 
 const StyledIconWrapper = styled.span`
@@ -163,7 +152,6 @@ export default {
     StyledHowToText,
     StyledTitleText,
     StyledSubtitleText,
-    StyledWaves,
     StyledIconWrapper
   }
 };
