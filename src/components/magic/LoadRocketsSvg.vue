@@ -61,7 +61,7 @@ const ConveyorBelt = styled.div`
 
 const spin = keyframes`
   100% {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 `;
 
@@ -115,15 +115,20 @@ export default {
     boxes: []
   }),
   mounted() {
+    var count = 0;
     setInterval(() => {
-      const squareSize = `${this.getRandomInt(4, 7) * 10}px`;
-
-      this.boxes.push({
-        id: this.getRandomInt(0, 10000000000),
-        width: squareSize,
-        height: squareSize,
-        fill: darken(`0.0${this.getRandomInt(5, 100)}`, "#e9bf71")
-      });
+      if (count < 15) {
+        const squareSize = `${this.getRandomInt(5, 14) * 5}px`;
+        this.boxes.push({
+          id: this.getRandomInt(0, 10000000000),
+          width: squareSize,
+          height: squareSize,
+          fill: darken(`0.${this.getRandomInt(0, 3)}`, "#d2c5af")
+        });
+      } else {
+        clearInterval();
+      }
+      count++;
     }, 1500);
   }
 };

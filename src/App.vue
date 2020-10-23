@@ -38,7 +38,7 @@ export default {
 <style>
 body {
   background: #f3f3f3;
-  font-family: "DM Sans", Helvetica, Arial, sans-serif;
+  font-family: "Euclid Circular A";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -57,7 +57,7 @@ html {
 
 button,
 input {
-  font-family: "DM sans", Helvetica, Arial, sans-serif;
+  font-family: "Euclid Circular A";
 }
 
 button,

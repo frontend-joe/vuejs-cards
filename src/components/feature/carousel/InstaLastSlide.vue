@@ -58,7 +58,6 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "DM Sans";
 `;
 
 const StyledRow = styled.div`
@@ -72,7 +71,6 @@ const StyledLeft = styled.div`
   position: relative;
   z-index: 1;
   padding: 0 10px 0 40px;
-  font-family: "DM Sans";
   font-weight: 600;
 `;
 
@@ -92,7 +90,7 @@ const StyledCenter = styled.div`
 
 const StyledHowToText = styled.div`
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 0px;
   letter-spacing: -1px;
   line-height: 1.5;
@@ -102,7 +100,7 @@ const StyledHowToText = styled.div`
 
 const StyledTitleText = styled.div`
   font-size: 25px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
   text-align: center;
@@ -111,7 +109,7 @@ const StyledTitleText = styled.div`
 
 const StyledNextTimeTitle = styled.div`
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.5px;
   text-align: center;
   color: ${rgba("#fff", 0.57)};
@@ -119,7 +117,7 @@ const StyledNextTimeTitle = styled.div`
 
 const StyledNextTimeText = styled.div`
   font-size: 38px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.2;
   letter-spacing: -1px;
   text-align: center;
@@ -129,7 +127,7 @@ const StyledNextTimeText = styled.div`
 
 const StyledNextTimeLibary = styled.div`
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: -0.5px;
   color: ${rgba("#fff", 0.57)};
 `;

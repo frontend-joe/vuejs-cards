@@ -6,13 +6,14 @@
       <Gear class="material-icons-outlined">settings</Gear>
     </ConveyorBelt>
     <Box
-      v-for="box in boxes"
+      v-for="box in boxesSent"
       :key="box.id"
       :width="box.width"
       :height="box.height"
+      :box="box.box"
     >
-      <BoxTape />
-      <BoxTape bottom />
+      <BoxTape :tape="box.tape" />
+      <BoxTape :tape="box.tape" bottom />
     </Box>
   </Wrapper>
 </template>
@@ -23,7 +24,9 @@ import styled, { keyframes } from "vue-styled-components";
 const styleProps = {
   width: String,
   height: String,
-  bottom: Boolean
+  bottom: Boolean,
+  box: String,
+  tape: String
 };
 
 const Wrapper = styled.div`
@@ -86,7 +89,7 @@ const Box = styled("div", styleProps)`
   bottom: 105px;
   width: ${props => props.width};
   height: ${props => props.height};
-  background: #e9bf71;
+  background: ${props => props.box};
   animation: ${move} 8s linear infinite;
 `;
 
@@ -98,7 +101,7 @@ const BoxTape = styled("div", styleProps)`
   width: 25%;
   ${props => (props.bottom ? "top: auto; bottom: 0;" : "")};
   transform: translateX(-50%);
-  background: #b17e56;
+  background: ${props => props.tape};
 `;
 
 export default {
@@ -118,21 +121,50 @@ export default {
     }
   },
   data: () => ({
-    boxes: [
+    boxesSent: [],
+    boxesToSend: [
       {
         width: "40px",
-        height: "40px"
+        height: "40px",
+        box: "#e9bf71",
+        tape: "#b17e56"
+      },
+      {
+        width: "60px",
+        height: "60px",
+        box: "#bf8859",
+        tape: "#774730"
+      },
+      {
+        width: "30px",
+        height: "30px",
+        box: "#dcc09d",
+        tape: "#ce7756"
+      },
+      {
+        width: "40px",
+        height: "40px",
+        box: "#e9bf71",
+        tape: "#b17e56"
+      },
+      {
+        width: "60px",
+        height: "60px",
+        box: "#e9bf71",
+        tape: "#b17e56"
       }
     ]
-  })
-  // mounted() {
-  //   setInterval(() => {
-  //     this.boxes.push({
-  //       id: this.getRandomInt(0, 10000000000),
-  //       width: `${this.getRandomInt(30, 80)}px`,
-  //       height: `${this.getRandomInt(30, 80)}px`
-  //     });
-  //   }, 1500);
-  // }
+  }),
+  mounted() {
+    let index = 0;
+    setInterval(() => {
+      this.boxesSent.push(this.boxesToSend[index]);
+      index++;
+
+      if (index > this.boxesToSend.length - 1) {
+        return clearInterval(setInterval);
+      }
+    }, 1500);
+  }
 };
 </script>
