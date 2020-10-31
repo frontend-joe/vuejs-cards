@@ -2,15 +2,14 @@
   <StyledWrapper>
     <FrameWrapper>
       <ImageNext v-if="false" />
-      <Frame background="linear-gradient(to top, #b2538c, #2d0542)">
-        <Top isDark centerText="Result" textColor="white" />
+      <Frame background="#F9F9FF">
+        <Top centerText="Result" />
         <Middle>
           <StyledMiddleSquare>
-            <StyledCardFrame> </StyledCardFrame>
+            <StyledCardFrame> <FocalCard /></StyledCardFrame>
           </StyledMiddleSquare>
         </Middle>
-        <Bottom isDark />
-        <FocalCard />
+        <Bottom />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -18,7 +17,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/magic/LoadRocketsSvg";
+import FocalCard from "@/components/cards/TimelineCardSimple";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";

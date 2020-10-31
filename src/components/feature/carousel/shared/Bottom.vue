@@ -29,7 +29,7 @@ const BottomRow = styled.div`
 `;
 
 const FrontendJoe = styled.img`
-  height: 40px;
+  height: 48px;
 `;
 
 const styleProps = {
@@ -39,7 +39,7 @@ const styleProps = {
 const SaveIcon = styled("i", styleProps)`
   position: relative;
   font-size: 38px;
-  color: ${props => (props.isDark ? rgba("white", 0.38) : "#522cad")};
+  color: ${props => (props.isDark ? rgba("white", 0.38) : "#a085e2")};
 
   &::before {
     content: "";

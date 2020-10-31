@@ -5,37 +5,34 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="linear-gradient(to top, #b2538c, #2d0542)">
-        <StyledWaves v-if="false" />
-        <Top isLastSlide textColor="white" />
-        <Middle verticalAlign="flex-start">
+      <Frame background="#F9F9FF">
+        <Top isLastSlide textColor="#6B6775" />
+        <Middle verticalAlign="center">
           <div :style="{ padding: '0 24px', marginTop: '0', width: '100%' }">
             <StyledHowToText>Was It Useful?</StyledHowToText>
             <StyledTitleText>Let me know in the comments</StyledTitleText>
 
-            <StyledCenter v-if="true">
-              <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
-              <StyledNextTimeText>
-                Load<br />
-                Rockets
-              </StyledNextTimeText>
-              <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
-              <StyledCardFrame>
-                <FocalCard />
-              </StyledCardFrame>
-            </StyledCenter>
+            <StyledCenter v-if="false"> </StyledCenter>
 
             <StyledRow>
-              <StyledLeft
-                v-if="false"
-                :style="{ transform: 'translate(-14px, -10px)' }"
-              >
+              <StyledLeft>
+                <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
+                <StyledNextTimeText>
+                  Create <br />
+                  Timeline<br />
+                  Cards
+                </StyledNextTimeText>
+                <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
               </StyledLeft>
-              <StyledRight v-if="false"> </StyledRight>
+              <StyledRight>
+                <StyledCardFrame>
+                  <FocalCard />
+                </StyledCardFrame>
+              </StyledRight>
             </StyledRow>
           </div>
         </Middle>
-        <Bottom isDark />
+        <Bottom />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -44,7 +41,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/magic/LoadRocketsSvg";
+import FocalCard from "@/components/cards/TimelineCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImagePrev from "./shared/ImagePrev";
@@ -90,59 +87,44 @@ const StyledCenter = styled.div`
 
 const StyledHowToText = styled.div`
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 0px;
   letter-spacing: -1px;
   line-height: 1.5;
   text-align: center;
-  color: ${rgba("#fff", 0.85)};
+  color: ${rgba("#565360", 1)};
 `;
 
 const StyledTitleText = styled.div`
   font-size: 25px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
   text-align: center;
-  color: ${rgba("#fff", 0.57)};
+  color: ${rgba("#565360", 0.57)};
 `;
 
 const StyledNextTimeTitle = styled.div`
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.5px;
-  text-align: center;
-  color: ${rgba("#fff", 0.57)};
+  color: ${rgba("#565360", 0.57)};
 `;
 
 const StyledNextTimeText = styled.div`
   font-size: 38px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
-  text-align: center;
-  color: ${rgba("#fff", 0.85)};
+  color: ${rgba("#565360", 1)};
   margin-bottom: 6px;
 `;
 
 const StyledNextTimeLibary = styled.div`
   font-size: 28px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.5px;
-  color: ${rgba("#fff", 0.57)};
-`;
-
-const StyledWaves = styled.div`
-  position: absolute;
-  z-index: 0;
-  bottom: 2px;
-  left: 0;
-  width: 100%;
-  height: 500px;
-  background: url(${require("@/assets/images/first-slide-wave.png")});
-  background-size: 200%;
-  background-position: right bottom;
-  background-repeat: no-repeat;
+  color: ${rgba("#9770D3", 0.75)};
 `;
 
 const StyledCardFrame = styled.div`
@@ -163,7 +145,6 @@ export default {
     StyledNextTimeTitle,
     StyledNextTimeText,
     StyledNextTimeLibary,
-    StyledWaves,
     StyledCardFrame,
     FocalCard,
     Frame,

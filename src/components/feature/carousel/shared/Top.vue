@@ -6,7 +6,7 @@
         width: centerText ? '160px' : 'auto'
       }"
     >
-      CSS Magic
+      UI Cards
     </span>
     <CenterText :textColor="textColor" v-if="centerText">
       {{ centerText }}
@@ -49,13 +49,13 @@ const TopRow = styled("div", styleProps)`
   align-items: center;
   justify-content: space-between;
   padding: 0 28px;
-  font-size: 24px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 600;
   color: ${props => rgba(props.textColor || "#10132F", 0.38)};
 `;
 
 const Arrow = styled.img`
-  height: 20px;
+  height: 27px;
 `;
 
 const CenterText = styled("div", styleProps)`
