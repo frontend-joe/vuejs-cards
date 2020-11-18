@@ -2,14 +2,14 @@
   <StyledWrapper>
     <FrameWrapper>
       <ImageNext v-if="false" />
-      <Frame background="#F9F9FF">
-        <Top centerText="Result" />
+      <Frame background="#6330B4">
+        <Top isDark textColor="white" centerText="Result" />
         <Middle>
           <StyledMiddleSquare>
-            <StyledCardFrame> <FocalCard /></StyledCardFrame>
+            <StyledCardFrame> <FocalCard /> </StyledCardFrame>
           </StyledMiddleSquare>
         </Middle>
-        <Bottom />
+        <Bottom isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -17,7 +17,7 @@
 
 <script>
 import styled from "vue-styled-components";
-import FocalCard from "@/components/cards/TimelineCardSimple";
+import FocalCard from "@/components/cards/TodoListCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";

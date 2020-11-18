@@ -1,5 +1,5 @@
 <template>
-  <TopRow>
+  <TopRow :isDark="isDark">
     <span
       :style="{
         color: getSubtitleColor,
@@ -38,7 +38,7 @@
 import styled, { keyframes } from "vue-styled-components";
 import { rgba } from "polished";
 
-const styleProps = { textColor: String };
+const styleProps = { textColor: String, isDark: Boolean };
 
 const TopRow = styled("div", styleProps)`
   position: relative;
@@ -49,13 +49,13 @@ const TopRow = styled("div", styleProps)`
   align-items: center;
   justify-content: space-between;
   padding: 0 28px;
-  font-size: 25px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: ${props => (props.isDark ? 500 : 600)};
   color: ${props => rgba(props.textColor || "#10132F", 0.38)};
 `;
 
 const Arrow = styled.img`
-  height: 27px;
+  height: 24px;
 `;
 
 const CenterText = styled("div", styleProps)`

@@ -9,6 +9,7 @@ import styled from "vue-styled-components";
 
 const StyledWrapper = styled.div`
   position: relative;
+  overflow: hidden;
 `;
 
 export default {

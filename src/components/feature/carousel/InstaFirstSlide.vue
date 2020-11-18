@@ -5,19 +5,19 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#F9F9FF">
-        <Top textColor="#565360" />
+      <Frame background="#6330B4">
+        <Top textColor="#fff" isDark />
         <Middle verticalAlign="flex-start">
-          <StyledBannerText>Timeline</StyledBannerText>
+          <StyledBannerText isDark>Todo List</StyledBannerText>
           <StyledMiddleSquareContent>
-            <StyledHowToText>How To</StyledHowToText>
-            <StyledTitleText>
+            <StyledHowToText isDark>How To</StyledHowToText>
+            <StyledTitleText isDark>
               Create <br />
-              Timeline <br />
+              Todo List <br />
               Cards
               <!-- Create a <br />Call To Action <br />Card -->
             </StyledTitleText>
-            <StyledSubtitleText>
+            <StyledSubtitleText isDark>
               <StyledIconWrapper>
                 <font-awesome-icon :icon="['fab', 'vuejs']" />
               </StyledIconWrapper>
@@ -32,7 +32,7 @@
             <FocalCard />
           </StyledCardFrame>
         </Middle>
-        <Bottom v-if="true" />
+        <Bottom v-if="true" isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -41,7 +41,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/cards/TimelineCardSimple";
+import FocalCard from "@/components/cards/TodoListCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImageNext from "./shared/ImageNext";
@@ -71,29 +71,30 @@ const props = {
 
 const StyledHowToText = styled("div", props)`
   font-size: 50px;
-  font-weight: ${p => (p.isDark ? 500 : 600)};
   line-height: 52px;
   margin-bottom: 14px;
   letter-spacing: -2px;
+  font-weight: ${p => (p.isDark ? 500 : 600)};
   color: ${({ isDark }) =>
     isDark ? rgba("#fff", 0.65) : rgba("#10132F", 0.57)};
 `;
 
 const StyledTitleText = styled("div", props)`
-  font-size: 5.25rem;
-  font-weight: ${p => (p.isDark ? 500 : 600)};
+  margin-bottom: 35px;
   letter-spacing: -2px;
   line-height: 92px;
-  margin-bottom: 35px;
+  font-size: 5.25rem;
+  font-weight: ${p => (p.isDark ? 500 : 600)};
   color: ${({ isDark }) =>
     isDark ? rgba("#FFF", 0.95) : rgba("#10132F", 0.85)};
 `;
 
 const StyledSubtitleText = styled("div", props)`
+  letter-spacing: -1px;
   font-size: 50px;
   font-weight: ${p => (p.isDark ? 500 : 600)};
-  letter-spacing: -1px;
-  color: ${({ isDark }) => (isDark ? "#7a68a6" : rgba("#522cad", 0.65))};
+  color: ${({ isDark }) =>
+    isDark ? rgba("#fff", 0.38) : rgba("#522cad", 0.65)};
   display: flex;
   align-items: center;
 `;
@@ -113,10 +114,9 @@ const StyledBannerText = styled("div", props)`
 
 const StyledCardFrame = styled.div`
   position: absolute;
-  z-index: 1;
-  right: 34px;
-  bottom: 55px;
-  width: 290px;
+  z-index: 2;
+  bottom: 85px;
+  right: 25px;
   transform: rotate(-3deg) scale(1);
 `;
 
@@ -131,7 +131,7 @@ const StyledIconWrapper = styled.span`
   justify-content: center;
   margin-right: 0.75rem;
   box-shadow: 0 11px 15px -7px ${rgba("#4e3dc8", 0.5)};
-  background: linear-gradient(45deg, #a78fe3 0%, #835ddf 100%);
+  background: linear-gradient(45deg, #742cea 0%, #462790 100%);
 `;
 
 export default {

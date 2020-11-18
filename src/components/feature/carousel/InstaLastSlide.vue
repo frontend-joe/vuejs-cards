@@ -5,34 +5,34 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#F9F9FF">
-        <Top isLastSlide textColor="#6B6775" />
+      <Frame background="#551DAF">
+        <Top isLastSlide textColor="#fff" isDark />
         <Middle verticalAlign="center">
-          <div :style="{ padding: '0 24px', marginTop: '0', width: '100%' }">
-            <StyledHowToText>Was It Useful?</StyledHowToText>
-            <StyledTitleText>Let me know in the comments</StyledTitleText>
+          <div :style="{ padding: ' 24px', marginTop: '0', width: '100%' }">
+            <StyledHowToText isDark>Was It Useful?</StyledHowToText>
+            <StyledTitleText isDark
+              >Let me know in the comments</StyledTitleText
+            >
 
             <StyledCenter v-if="false"> </StyledCenter>
 
-            <StyledRow>
+            <StyledRow v-if="true">
               <StyledLeft>
-                <StyledNextTimeTitle>Next Time</StyledNextTimeTitle>
-                <StyledNextTimeText>
+                <StyledNextTimeTitle isDark>Next Time</StyledNextTimeTitle>
+                <StyledNextTimeText isDark>
                   Create <br />
-                  Timeline<br />
+                  Todo List <br />
                   Cards
                 </StyledNextTimeText>
-                <StyledNextTimeLibary>In Vuejs</StyledNextTimeLibary>
+                <StyledNextTimeLibary isPurple>In Vuejs</StyledNextTimeLibary>
               </StyledLeft>
               <StyledRight>
-                <StyledCardFrame>
-                  <FocalCard />
-                </StyledCardFrame>
+                <StyledCardFrame> <FocalCard /> </StyledCardFrame>
               </StyledRight>
             </StyledRow>
           </div>
         </Middle>
-        <Bottom />
+        <Bottom isDark />
       </Frame>
     </FrameWrapper>
   </StyledWrapper>
@@ -41,7 +41,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/cards/TimelineCard";
+import FocalCard from "@/components/cards/TodoListCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImagePrev from "./shared/ImagePrev";
@@ -83,51 +83,64 @@ const StyledCenter = styled.div`
   align-items: center;
   justify-content: center;
   margin-bottom: 1.5rem;
+  text-align: center;
 `;
 
-const StyledHowToText = styled.div`
+const textProps = { isDark: Boolean, isPurple: Boolean };
+
+const StyledHowToText = styled("div", textProps)`
   font-size: 50px;
-  font-weight: 600;
   margin-bottom: 0px;
   letter-spacing: -1px;
   line-height: 1.5;
   text-align: center;
-  color: ${rgba("#565360", 1)};
+  font-weight: ${p => (p.isDark ? 500 : 600)};
+  color: ${({ isDark }) =>
+    isDark ? rgba("#fff", 0.65) : rgba("#10132F", 0.57)};
 `;
 
-const StyledTitleText = styled.div`
+const StyledTitleText = styled("div", textProps)`
   font-size: 25px;
-  font-weight: 600;
   letter-spacing: -0.5px;
   margin-bottom: 40px;
   text-align: center;
-  color: ${rgba("#565360", 0.57)};
+  font-weight: ${p => (p.isDark ? 500 : 600)};
+  color: ${({ isDark }) =>
+    isDark ? rgba("#FFF", 0.95) : rgba("#10132F", 0.85)};
 `;
 
-const StyledNextTimeTitle = styled.div`
+const StyledNextTimeTitle = styled("div", textProps)`
   font-size: 28px;
-  font-weight: 600;
   letter-spacing: -0.5px;
-  color: ${rgba("#565360", 0.57)};
+  font-weight: ${p => (p.isDark ? 500 : 600)};
+  color: ${({ isDark }) =>
+    isDark ? rgba("#fff", 0.65) : rgba("#10132F", 0.57)};
 `;
 
-const StyledNextTimeText = styled.div`
+const StyledNextTimeText = styled("div", textProps)`
   font-size: 38px;
-  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -1px;
-  color: ${rgba("#565360", 1)};
+  font-weight: ${p => (p.isDark ? 500 : 600)};
+  color: ${({ isDark }) =>
+    isDark ? rgba("#FFF", 0.95) : rgba("#10132F", 0.85)};
   margin-bottom: 6px;
 `;
 
-const StyledNextTimeLibary = styled.div`
+const StyledNextTimeLibary = styled("div", textProps)`
   font-size: 28px;
-  font-weight: 600;
   letter-spacing: -0.5px;
-  color: ${rgba("#9770D3", 0.75)};
+  font-weight: ${p => (p.isDark || p.isPurple ? 500 : 600)};
+  color: ${({ isDark, isPurple }) =>
+    isDark
+      ? "#733bcb"
+      : isPurple
+      ? rgba("white", 0.38)
+      : rgba("#522cad", 0.65)};
 `;
 
 const StyledCardFrame = styled.div`
+  transform: translateX(15px);
   ${"" /* position: absolute;
   right: 0;
   bottom: 0; */}
