@@ -5,7 +5,7 @@
         v-if="false"
         :src="require('@/assets/images/second-slide.png')"
       />
-      <Frame background="#551DAF">
+      <Frame background="#100f10">
         <Top isLastSlide textColor="#fff" isDark />
         <Middle verticalAlign="center">
           <div :style="{ padding: ' 24px', marginTop: '0', width: '100%' }">
@@ -21,7 +21,7 @@
                 <StyledNextTimeTitle isDark>Next Time</StyledNextTimeTitle>
                 <StyledNextTimeText isDark>
                   Create <br />
-                  Todo List <br />
+                  Wallet <br />
                   Cards
                 </StyledNextTimeText>
                 <StyledNextTimeLibary isPurple>In Vuejs</StyledNextTimeLibary>
@@ -41,7 +41,7 @@
 <script>
 import styled from "vue-styled-components";
 import { rgba } from "polished";
-import FocalCard from "@/components/cards/TodoListCard";
+import FocalCard from "@/components/cards/ProductCard";
 import Frame from "./shared/Frame";
 import FrameWrapper from "./shared/FrameWrapper";
 import ImagePrev from "./shared/ImagePrev";
@@ -67,7 +67,7 @@ const StyledLeft = styled.div`
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
-  padding: 0 10px 0 40px;
+  padding: 0 0 0 40px;
   font-weight: 600;
 `;
 
